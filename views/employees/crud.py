@@ -13,8 +13,8 @@ class EmployeeStorage:
         self.last_id += 1
         return self.last_id
 
-    def create_employee(self, employeecreate: EmployeeCreate) -> Employee:
-        employee = Employee(id=self.next_id, **employeecreate.model_dump())
+    def create_employee(self, employee_create: EmployeeCreate,) -> Employee:
+        employee = Employee(id=self.next_id, **employee_create.model_dump(),)
         self.employees[employee.id] = employee
         return employee
 
