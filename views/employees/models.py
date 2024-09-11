@@ -7,7 +7,7 @@ class EmployeeBase(BaseModel):
 
 
 class EmployeeCreate(EmployeeBase):
-    pass
+    ...
 
 
 class Employee(EmployeeBase):
