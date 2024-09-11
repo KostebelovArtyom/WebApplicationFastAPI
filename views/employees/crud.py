@@ -17,3 +17,15 @@ class EmployeeStorage:
         employee = Employee(id=self.next_id, **employeecreate.model_dump())
         self.employees[employee.id] = employee
         return employee
+
+    def get_employees(self) -> list[Employee]:
+        return list(self.employees.values())
+
+    def get_employees_by_id(self, employee_id: int) -> Optional[Employee]:
+        return self.employees.get(employee_id)
+
+    def rm_employees_by_id(self, employees_id: int) -> None:
+        return self.employees.pop(employees_id, None)
+
+
+storage = EmployeeStorage()
