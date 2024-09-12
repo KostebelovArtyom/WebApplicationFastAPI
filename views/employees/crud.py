@@ -21,11 +21,11 @@ class EmployeeStorage:
     def get_employees(self) -> list[Employee]:
         return list(self.employees.values())
 
-    def get_employees_by_id(self, employee_id: int) -> Optional[Employee]:
+    def get_employees_by_id(self, employee_id: int,) -> Optional[Employee]:
         return self.employees.get(employee_id)
 
-    def rm_employees_by_id(self, employees_id: int) -> None:
-        return self.employees.pop(employees_id, None)
+    def delete_employees_by_id(self, employees_id: int) -> None:
+        self.employees.pop(employees_id, None)
 
 
 storage = EmployeeStorage()
