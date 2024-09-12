@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr  # Объявил pydantic моедлей и формы EmailStr
 
 
 class EmployeeBase(BaseModel):
